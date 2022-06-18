@@ -5,7 +5,7 @@
    viewBox="0 0 430 537"
    version="1.1"
    id="svg24"
-   sodipodi:docname="logo-body.svg"
+   sodipodi:docname="logo-wing-up.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,18 +23,19 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="1.9124767"
-     inkscape:cx="214.64314"
-     inkscape:cy="268.5"
+     inkscape:zoom="1.3523252"
+     inkscape:cx="168.22876"
+     inkscape:cy="238.47813"
      inkscape:window-width="1649"
      inkscape:window-height="1259"
-     inkscape:window-x="1233"
-     inkscape:window-y="679"
+     inkscape:window-x="1214"
+     inkscape:window-y="1175"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg24" />
   <path
      clip-path="url(#SVGID_2_)"
-     d="m 374,176 c 0,0 -14,-69.4 -104.4,-50.7 -101.12007,16.71139 47.03446,-8.6212 -55.69983,8.90689 L 85.4,370 c 5.822886,4.63201 13.761183,16.40418 19.5,23.6 127.6,0 291.7,-46 269,-217.7"
+     d="M 233.2227,229.70053 34.015485,28.592299 C 145.92988,-1.5211065 321.4701,8.1306446 351.81662,125.08221"
      id="path18"
-     sodipodi:nodetypes="cccccc" />
+     sodipodi:nodetypes="ccc"
+     style="stroke-width:1.0902" />
 </svg>

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gBot.png-b94e4323e02d18e8c6fabf612fa396da.stex"
+path="res://.import/logo-wing-up.svg-01974eb7c881ed09bee9824beeb70060.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/gBot.png"
-dest_files=[ "res://.import/gBot.png-b94e4323e02d18e8c6fabf612fa396da.stex" ]
+source_file="res://player/logo-wing-up.svg"
+dest_files=[ "res://.import/logo-wing-up.svg-01974eb7c881ed09bee9824beeb70060.stex" ]
 
 [params]
 
