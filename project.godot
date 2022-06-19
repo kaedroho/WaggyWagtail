@@ -20,12 +20,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Skeleton2D Demo"
-config/description="This demo shows how to create a rigged and animated character in 2D using
-Godot's Skeleton2D node. There are several movement-related animations and
-there is a simple character controller that controls the animations."
+config/name="Waggy Wagtail"
 run/main_scene="res://level.tscn"
-config/icon="res://icon.png"
 
 [display]
 
@@ -75,6 +71,11 @@ walk={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="world"
 
 [network]
 
