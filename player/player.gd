@@ -69,7 +69,6 @@ func _physics_process(delta):
 			$AnimationTree["parameters/land/active"] = true
 			falling_slow = false
 		if Input.is_action_just_pressed("jump"):
-			$AnimationTree["parameters/jump/active"] = true
 			velocity.y = -speed.y
 		if abs(velocity.x) > 50:
 			$AnimationTree["parameters/state/current"] = States.RUN
@@ -90,6 +89,9 @@ func _physics_process(delta):
 
 func flap_wings():
 	if abs(velocity.x) >= 100 and flap_cooldown < 0.0:
+		# Play flap animation
+		$AnimationTree["parameters/fly_state/playback"].travel("flap")
+
 		# Increase velocity
 		var angle: = PI - PI * 1/4
 
