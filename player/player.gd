@@ -15,6 +15,8 @@ var velocity = Vector2.ZERO
 var falling_slow = false
 var falling_fast = false
 var no_move_horizontal_time = 0.0
+var is_flying = false
+var flap_cooldown = 0.0;
 
 onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 onready var sprite = $Sprite
@@ -26,15 +28,23 @@ func _ready():
 
 
 func _physics_process(delta):
+	flap_cooldown -= delta;
 	velocity.y += gravity * delta
-	if no_move_horizontal_time > 0.0:
-		# After doing a hard fall, don't move for a short time.
-		velocity.x = 0.0
-		no_move_horizontal_time -= delta
-	else:
-		velocity.x = (Input.get_action_strength("move_right") - Input.get_action_strength("move_left")) * speed.x
-		if Input.is_action_pressed("walk"):
-			velocity.x *= 0.2
+
+	if abs(velocity.x) < 100:
+		# Can't fly if too slow
+		stop_flying()
+
+	if not is_flying:
+		if no_move_horizontal_time > 0.0:
+			# After doing a hard fall, don't move for a short time.
+			velocity.x = 0.0
+			no_move_horizontal_time -= delta
+		else:
+			velocity.x = (Input.get_action_strength("move_right") - Input.get_action_strength("move_left")) * speed.x
+			if Input.is_action_pressed("walk"):
+				velocity.x *= 0.2
+
 	#warning-ignore:return_value_discarded
 	velocity = move_and_slide(velocity, Vector2.UP)
 	# Calculate flipping and falling speed for animation purposes.
@@ -49,6 +59,8 @@ func _physics_process(delta):
 		falling_slow = true
 	# Check if on floor and do mostly animation stuff based on it.
 	if is_on_floor():
+		stop_flying()
+
 		if falling_fast:
 			$AnimationTree["parameters/land_hard/active"] = true
 			no_move_horizontal_time = 0.4
@@ -68,7 +80,29 @@ func _physics_process(delta):
 		else:
 			$AnimationTree["parameters/state/current"] = States.IDLE
 	else:
-		if velocity.y > 0:
-			$AnimationTree["parameters/state/current"] = States.FALL
-		else:
+		if Input.is_action_just_pressed("jump"):
+			flap_wings()
+
+		if is_flying:
 			$AnimationTree["parameters/state/current"] = States.FLY
+		else:
+			$AnimationTree["parameters/state/current"] = States.FALL
+
+func flap_wings():
+	if abs(velocity.x) >= 100 and flap_cooldown < 0.0:
+		# Increase velocity
+		var angle: = PI - PI * 1/4
+
+		if velocity.x < 0:
+			angle = PI + PI * 1/4
+
+		velocity.x = sin(angle) * speed.y
+		velocity.y = cos(angle) * speed.y
+
+		# Update flap state
+		is_flying = true
+		flap_cooldown = 0.2
+
+func stop_flying():
+	is_flying = false
+	flap_cooldown = 0.0
