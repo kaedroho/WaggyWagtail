@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://level/level.gd" type="Script" id=1]
 [ext_resource path="res://level/tileset/tiles_demo.png" type="Texture" id=2]
 [ext_resource path="res://level/background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://page/page.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 6, 32, 6, 32, 32, 0, 32 )
@@ -352,6 +353,165 @@ tile_data = PoolIntArray( -65546, 536870913, 0, -65545, 1, 0, -131044, 536870913
 [node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
 scroll_base_scale = Vector2( 0.1, 0 )
 
-[node name="Waggy" parent="." instance=ExtResource( 4 )]
+[node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 90, 546 )
 collision_mask = 2
+
+[node name="Page" parent="." instance=ExtResource( 5 )]
+position = Vector2( 146, 530 )
+
+[node name="Page2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 344, 564 )
+
+[node name="Page3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 238, 379 )
+
+[node name="Page4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 269, 379 )
+
+[node name="Page5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 297, 379 )
+
+[node name="Page6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 324, 379 )
+
+[node name="Page7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 254, 403 )
+
+[node name="Page8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 284, 402 )
+
+[node name="Page9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 310, 402 )
+
+[node name="Page10" parent="." instance=ExtResource( 5 )]
+position = Vector2( -143, 405 )
+
+[node name="Page11" parent="." instance=ExtResource( 5 )]
+position = Vector2( -116, 405 )
+
+[node name="Page12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 78, 147 )
+
+[node name="Page13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 107, 146 )
+
+[node name="Page14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 177, 118 )
+
+[node name="Page15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 202, 118 )
+
+[node name="Page16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 516, 531 )
+
+[node name="Page17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 471, 531 )
+
+[node name="Page18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 568, 464 )
+
+[node name="Page19" parent="." instance=ExtResource( 5 )]
+position = Vector2( 609, 463 )
+
+[node name="Page20" parent="." instance=ExtResource( 5 )]
+position = Vector2( 665, 393 )
+
+[node name="Page21" parent="." instance=ExtResource( 5 )]
+position = Vector2( 743, 433 )
+
+[node name="Page22" parent="." instance=ExtResource( 5 )]
+position = Vector2( -77, 16 )
+
+[node name="Page23" parent="." instance=ExtResource( 5 )]
+position = Vector2( -46, 16 )
+
+[node name="Page24" parent="." instance=ExtResource( 5 )]
+position = Vector2( -17, 16 )
+
+[node name="Page25" parent="." instance=ExtResource( 5 )]
+position = Vector2( 11, 16 )
+
+[node name="Page26" parent="." instance=ExtResource( 5 )]
+position = Vector2( 42, 17 )
+
+[node name="Page27" parent="." instance=ExtResource( 5 )]
+position = Vector2( 73, 18 )
+
+[node name="Page28" parent="." instance=ExtResource( 5 )]
+position = Vector2( 112, 18 )
+
+[node name="Page29" parent="." instance=ExtResource( 5 )]
+position = Vector2( 146, 18 )
+
+[node name="Page30" parent="." instance=ExtResource( 5 )]
+position = Vector2( -242, 179 )
+
+[node name="Page31" parent="." instance=ExtResource( 5 )]
+position = Vector2( -219, 180 )
+
+[node name="Page32" parent="." instance=ExtResource( 5 )]
+position = Vector2( 398, 213 )
+
+[node name="Page33" parent="." instance=ExtResource( 5 )]
+position = Vector2( 428, 213 )
+
+[node name="Page34" parent="." instance=ExtResource( 5 )]
+position = Vector2( 79, 211 )
+
+[node name="Page35" parent="." instance=ExtResource( 5 )]
+position = Vector2( 133, 210 )
+
+[node name="Page36" parent="." instance=ExtResource( 5 )]
+position = Vector2( 462, 276 )
+
+[node name="Page37" parent="." instance=ExtResource( 5 )]
+position = Vector2( 569, 277 )
+
+[node name="Page38" parent="." instance=ExtResource( 5 )]
+position = Vector2( 612, 276 )
+
+[node name="Page39" parent="." instance=ExtResource( 5 )]
+position = Vector2( 597, 85 )
+
+[node name="Page40" parent="." instance=ExtResource( 5 )]
+position = Vector2( 281, 54 )
+
+[node name="Page41" parent="." instance=ExtResource( 5 )]
+position = Vector2( 308, 54 )
+
+[node name="Page42" parent="." instance=ExtResource( 5 )]
+position = Vector2( 335, 54 )
+
+[node name="Page43" parent="." instance=ExtResource( 5 )]
+position = Vector2( 365, 54 )
+
+[node name="Page44" parent="." instance=ExtResource( 5 )]
+position = Vector2( 396, 53 )
+
+[node name="Page45" parent="." instance=ExtResource( 5 )]
+position = Vector2( 427, 53 )
+
+[node name="Page46" parent="." instance=ExtResource( 5 )]
+position = Vector2( 625, 86 )
+
+[node name="Page47" parent="." instance=ExtResource( 5 )]
+position = Vector2( 656, 87 )
+
+[node name="Page48" parent="." instance=ExtResource( 5 )]
+position = Vector2( 686, 86 )
+
+[node name="Page49" parent="." instance=ExtResource( 5 )]
+position = Vector2( 721, 87 )
+
+[node name="Page50" parent="." instance=ExtResource( 5 )]
+position = Vector2( 754, 87 )
+
+[node name="Page51" parent="." instance=ExtResource( 5 )]
+position = Vector2( 787, 87 )
+
+[node name="Page52" parent="." instance=ExtResource( 5 )]
+position = Vector2( 815, 87 )
+
+[node name="Page53" parent="." instance=ExtResource( 5 )]
+position = Vector2( 850, 87 )
