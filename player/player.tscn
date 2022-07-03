@@ -278,7 +278,7 @@ tracks/10/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 102, -76.104 ) ]
+"values": [ Vector2( 102, -75.104 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -831,7 +831,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 108, -63.104 ) ]
+"values": [ Vector2( 110, -65.104 ) ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -1059,16 +1059,17 @@ position = Vector2( 3.05176e-05, -3.05176e-05 )
 
 [node name="Hip" type="Bone2D" parent="Sprite/Skeleton2D"]
 position = Vector2( -3, -11 )
+rotation = 0.68766
 rest = Transform2D( 1, 0, 0, 1, -3, -11 )
 
 [node name="Chest" type="Bone2D" parent="Sprite/Skeleton2D/Hip"]
 position = Vector2( 0, -32 )
-rotation = -0.0367483
+rotation = -0.00677465
 rest = Transform2D( 0.999977, -0.0067746, 0.0067746, 0.999977, 0, -32 )
 
 [node name="Head" type="Bone2D" parent="Sprite/Skeleton2D/Hip/Chest"]
-position = Vector2( 106, -54.104 )
-rotation = 0.261006
+position = Vector2( 102, -76.104 )
+rotation = -0.417134
 rest = Transform2D( 0.999415, 0.0342092, -0.0342092, 0.999415, 108, -57.103 )
 
 [node name="Logo-head" type="Sprite" parent="Sprite/Skeleton2D/Hip/Chest/Head"]
@@ -1095,7 +1096,7 @@ texture = ExtResource( 5 )
 
 [node name="Chin" type="Bone2D" parent="Sprite/Skeleton2D/Hip/Chest/Head"]
 position = Vector2( 0, -49 )
-rotation = -0.00505203
+rotation = 0.0598713
 rest = Transform2D( 0.999999, 0.00169551, -0.00169551, 0.999999, 0, -49 )
 default_length = 60.0
 
@@ -1126,7 +1127,7 @@ texture = ExtResource( 2 )
 
 [node name="RightHip" type="Bone2D" parent="Sprite/Skeleton2D/Hip"]
 position = Vector2( -29.4856, 36.7807 )
-rotation = 0.174533
+rotation = -0.0478163
 rest = Transform2D( 0.984808, 0.173648, -0.173648, 0.984808, -29.4856, 36.7807 )
 
 [node name="RightLeg" type="Bone2D" parent="Sprite/Skeleton2D/Hip/RightHip"]
@@ -1140,7 +1141,7 @@ default_length = 60.0
 
 [node name="LeftHip" type="Bone2D" parent="Sprite/Skeleton2D/Hip"]
 position = Vector2( -29.4856, 36.7808 )
-rotation = -0.174533
+rotation = 0.0478163
 rest = Transform2D( 0.984808, -0.173648, 0.173648, 0.984808, -29.4856, 36.7808 )
 
 [node name="LeftLeg" type="Bone2D" parent="Sprite/Skeleton2D/Hip/LeftHip"]
@@ -1149,7 +1150,7 @@ rest = Transform2D( 1, 0, 0, 1, -50, 65 )
 
 [node name="LeftFoot" type="Bone2D" parent="Sprite/Skeleton2D/Hip/LeftHip/LeftLeg"]
 position = Vector2( 40, 150 )
-rotation = -0.694593
+rotation = 0.174533
 rest = Transform2D( 0.984808, 0.173648, -0.173648, 0.984808, 40, 150 )
 default_length = 60.0
 
